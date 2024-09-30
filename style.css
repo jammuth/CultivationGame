@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  gap: 10px; /* Adjust the gap between inputs as needed */
+}
+
+input label {
+  flex: 1; /* Adjust the flex property as needed */
+}
+
+table {
+  display: block;
+  border-collapse: true;
+}
