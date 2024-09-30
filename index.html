@@ -7,16 +7,19 @@
   <title>Cultivation Game</title>
 </head>
 <body>
-  <h1>Welcome to Cultivation Game</h1>
+  <h1>Welcome to my Cultivation Game Exp-Calculator Demo</h1>
+  <p>Levels are split into "grades" and "ranks"
+  <br>Grades are the whole number part of the level, and ranks are the decimal part of the level.
+  <br>Grades are numbers 1 to 7.
+  <br>ranks are numbers 1 to 9, when the rank reaches 9 the grade increases and the rank resets back to 1.
+  <br>Enter the values of a and b to calculate the experience points required to reach level 7.9
+  <br>Formula is a*(log(level)^b), where level is the float representaion of the grades and ranks for example; 3.4 = 3rd grade with 4th rank</p>
   <form id="params"class="container">
     <label for="a">a:</label>
     <input type="text" id="a" name="a"><br><br>
     
     <label for="b">b:</label>
     <input type="text" id="b" name="b"><br><br>
-    
-    <label for="c">c:</label>
-    <input type="text" id="c" name="c"><br><br>
     
     <input type="submit" value="Submit">
   </form>

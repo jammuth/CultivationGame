@@ -5,26 +5,22 @@ document.getElementById('params').onsubmit = function (event) {
   // Your form submission logic here
   const a = document.getElementById('a').value;
   const b = document.getElementById('b').value;
-  const c = document.getElementById('c').value;
   const expcurve = document.getElementById('expcurve');
 
   if (
     !Number.isInteger(Number(a)) ||
     !Number.isInteger(Number(b)) ||
-    !Number.isInteger(Number(c)) ||
     a === '' ||
-    b === '' ||
-    c === ''
+    b === ''
   ) {
-    alert('Please enter valid integers for a, b, and c.');
+    alert('Please enter valid integers for a and b');
     document.getElementById('a').innerText = '';
     document.getElementById('b').innerText = '';
-    document.getElementById('c').innerText = '';
     document.getElementById('a').focus();
     return;
   }
 
-  const curve = expCurve(Number(a), Number(b), Number(c));
+  const curve = expCurve(Number(a), Number(b));
 
   function jsonToTable(json) {
     const table = document.createElement('table');
