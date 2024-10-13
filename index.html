@@ -10,20 +10,31 @@
   <h1>Welcome to my Cultivation Game Exp-Calculator Demo</h1>
   <p>Enter the values of a and b to calculate the experience points required to reach level 7.9
   <br>Formula is a*(log(level)^b), where level is the float representaion of the grades and ranks for example; 3.4 = 3rd grade with 4th rank</p>
-  <form id="params"class="container">
-    <label for="a">a:</label>
-    <input type="text" id="a" name="a"><br><br>
-    
-    <label for="b">b:</label>
-    <input type="text" id="b" name="b"><br><br>
-    
-    <input type="submit" value="Submit">
-  </form>
-  <p>Levels are split into "grades" and "ranks"
-    <br>Grades are the whole number part of the level, and ranks are the decimal part of the level.
-    <br>Grades are numbers 1 to 7.
-    <br>ranks are numbers 1 to 9, when the rank reaches 9 the grade increases and the rank resets back to 1.</p>
-  <script type="module" lang="js" src="index.js"></script>
-  <div id="expcurve"></div>
+  <div class="container">
+    <div class="exp">
+      <form id="params" class="container">
+        <label for="a">a:</label>
+        <input type="text" id="a" name="a"><br><br>
+        
+        <label for="b">b:</label>
+        <input type="text" id="b" name="b"><br><br>
+        
+        <input type="submit" value="Submit">
+      </form>
+      <p>Levels are split into "grades" and "ranks"
+        <br>Grades are the whole number part of the level, and ranks are the decimal part of the level.
+        <br>Grades are numbers 1 to 7.
+        <br>ranks are numbers 1 to 9, when the rank reaches 9 the grade increases and the rank resets back to 1.</p>
+      <script type="module" lang="js" src="index.js"></script>
+      <div id="expcurve" class="expcurve"></div>
+    </div>
+    <div class="herb">
+      <h2>Herb</h2>
+      <p>Herb is a plant that is used for cooking and alchemy. It can be found in the wild or grown in a garden.</p>
+      <form id="herbparams">
+        <input id='generate' type="submit" value="Generate">
+      <div id="herblist"></div>
+    </div>
+  </div>
 </body>
 </html>

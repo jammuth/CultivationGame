@@ -3,6 +3,10 @@
   gap: 10px; /* Adjust the gap between inputs as needed */
 }
 
+.container > div {
+  flex: 1; /* Each child div will take up equal space */
+}
+
 input label {
   flex: 1; /* Adjust the flex property as needed */
 }
@@ -10,4 +14,9 @@ input label {
 table {
   display: block;
   border-collapse: true;
+}
+
+.expcurve {
+  max-height: 50vh;
+  overflow-y: auto;
 }
