@@ -84,14 +84,16 @@ export function generateMaterialName() {
     case rand < 50:
       return `${zodiacAnimal} ${noun}`;
     case rand < 60:
-      return `${noun} of the ${color} ${zodiacAnimal}`;
+      return `${color} ${zodiacAnimal} ${noun}`;
     case rand < 70:
       return `${timeAdjective} ${color} ${noun}`;
     case rand < 80:
       return `${timeAdjective} ${zodiacAnimal} ${noun}`;
     case rand < 90:
-      return `${color} ${zodiacAnimal} ${noun}`;
-    case rand < 100:
+      return `${noun} of the ${color} ${zodiacAnimal}`;
+    case rand < 99:
       return `${timeAdjective} ${color} ${zodiacAnimal} ${noun}`;
+    case rand < 100:
+      return `${timeAdjective} ${noun} of the ${color} ${zodiacAnimal}`;
   }
 }
