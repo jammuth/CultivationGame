@@ -116,26 +116,26 @@ export function generateMaterialName() {
 
   switch (true) {
     case rand < 30:
-      return `${random} ${noun}`;
+      return {rank: "D", name:`${random} ${noun}`};
     case rand < 60:
-      return `${noun} of ${random}`;
+      return {rank: "DC", name:`${noun} of ${random}`};
     case rand < 65:
-      return `${timeAdjective} ${noun}`;
+      return {rank: "C", name:`${timeAdjective} ${noun}`};
     case rand < 70:
-      return `${color} ${noun}`;
+      return {rank: "CB", name:`${color} ${noun}`};
     case rand < 75:
-      return `${zodiacAnimal} ${noun}`;
+      return {rank: "B", name:`${zodiacAnimal} ${noun}`};
     case rand < 80:
-      return `${color} ${zodiacAnimal} ${noun}`;
+      return {rank: "BA", name:`${color} ${zodiacAnimal} ${noun}`};
     case rand < 90:
-      return `${timeAdjective} ${color} ${noun}`;
+      return {rank: "A", name:`${timeAdjective} ${color} ${noun}`};
     case rand < 95:
-      return `${timeAdjective} ${zodiacAnimal} ${noun}`;
+      return {rank: "AS", name:`${timeAdjective} ${zodiacAnimal} ${noun}`};
     case rand < 97:
-      return `${noun} of the ${color} ${zodiacAnimal}`;
+      return {rank: "S", name:`${noun} of the ${color} ${zodiacAnimal}`};
     case rand < 99:
-      return `${timeAdjective} ${color} ${zodiacAnimal}'s ${noun}`;
+      return {rank: "S*", name:`${timeAdjective} ${color} ${zodiacAnimal} ${noun}`};
     case rand < 100:
-      return `${timeAdjective} ${noun} of the ${color} ${zodiacAnimal}`;
+      return {rank: "***", name:`${timeAdjective} ${noun} of the ${color} ${zodiacAnimal}`};
   }
 }

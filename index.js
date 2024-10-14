@@ -31,13 +31,13 @@ document.getElementById('generate').onclick = function (event) {
   const herblist = document.getElementById('herblist');
   herblist.innerHTML = ''; // Clear previous content
   let herbs = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 25; i++) {
     herbs.push(generateMaterialName());
   }
 
   herbs.forEach((herb) => {
     const li = document.createElement('li');
-    li.textContent = herb;
+    li.textContent = `${herb.rank.padEnd(3,' ')}: ${herb.name}`;
     herblist.appendChild(li);
   });
 };
