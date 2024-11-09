@@ -1,4 +1,5 @@
-export function generateMaterialName() {
+//export 
+const generateMaterialName = () =>{
   const timeAdjectives = [
     'Young',
     'Thousand Year',
@@ -116,26 +117,49 @@ export function generateMaterialName() {
 
   switch (true) {
     case rand < 30:
-      return {rank: "D", name:`${random} ${noun}`};
+      return {value: rand, rank: "D", name:`${random} ${noun}`};
     case rand < 60:
-      return {rank: "DC", name:`${noun} of ${random}`};
+      return {value: rand, rank: "D+", name:`${noun} of ${random}`};
     case rand < 65:
-      return {rank: "C", name:`${timeAdjective} ${noun}`};
+      return {value: rand, rank: "C", name:`${timeAdjective} ${noun}`};
     case rand < 70:
-      return {rank: "CB", name:`${color} ${noun}`};
+      return {value: rand, rank: "C+", name:`${color} ${noun}`};
     case rand < 75:
-      return {rank: "B", name:`${zodiacAnimal} ${noun}`};
+      return {value: rand, rank: "B", name:`${zodiacAnimal} ${noun}`};
     case rand < 80:
-      return {rank: "BA", name:`${color} ${zodiacAnimal} ${noun}`};
+      return {value: rand, rank: "B+", name:`${color} ${zodiacAnimal} ${noun}`};
     case rand < 90:
-      return {rank: "A", name:`${timeAdjective} ${color} ${noun}`};
+      return {value: rand, rank: "A", name:`${timeAdjective} ${color} ${noun}`};
     case rand < 95:
-      return {rank: "AS", name:`${timeAdjective} ${zodiacAnimal} ${noun}`};
+      return {value: rand, rank: "A+", name:`${timeAdjective} ${zodiacAnimal} ${noun}`};
     case rand < 97:
-      return {rank: "S", name:`${noun} of the ${color} ${zodiacAnimal}`};
+      return {value: rand, rank: "S", name:`${noun} of the ${color} ${zodiacAnimal}`};
     case rand < 99:
-      return {rank: "S*", name:`${timeAdjective} ${color} ${zodiacAnimal} ${noun}`};
+      return {value: rand, rank: "S+", name:`${timeAdjective} ${color} ${zodiacAnimal} ${noun}`};
     case rand < 100:
-      return {rank: "***", name:`${timeAdjective} ${noun} of the ${color} ${zodiacAnimal}`};
+      return {value: rand, rank: "S++", name:`${timeAdjective} ${noun} of the ${color} ${zodiacAnimal}`};
   }
 }
+
+//export 
+const generateMaterial = (material) =>{
+  const materialName = material.name;
+  const maxValue = material.value / 100;
+  const minValue = maxValue / 200;
+  const manaValue = () => Math.random() * (maxValue - minValue) + minValue;
+  const manaValues = {
+    fire: manaValue(),
+    water: manaValue(),
+    earth: manaValue(),
+    air: manaValue(),
+    light: manaValue(),
+    dark: manaValue(),
+  };
+
+  return {
+    name: materialName,
+    manaValues: manaValues,
+  };
+};
+
+module.exports = {generateMaterialName, generateMaterial};

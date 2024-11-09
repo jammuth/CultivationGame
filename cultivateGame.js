@@ -30,10 +30,10 @@ Object.keys(grade).forEach((gradeKey) => {
   });
 });
 
-export 
+//export 
 const levels = level_arr;
 
-export 
+//export 
 const next = (current) => {
   //find level index
   const index = levels.indexOf(current);
@@ -42,7 +42,7 @@ const next = (current) => {
   return levels[index + 1];
 };
 
-export 
+//export 
 const previous = (current) => {
   //find level index
   const index = levels.indexOf(current);
@@ -51,7 +51,7 @@ const previous = (current) => {
   return levels[index - 1];
 };
 
-export 
+//export 
 const multiplier = (current, item) => {
   //find current index
   const cindex = levels.indexOf(current);
@@ -64,12 +64,12 @@ const multiplier = (current, item) => {
   return 1 + (iindex - cindex) / 10;
 };
 
-export 
+//export 
 const expNext = (level, a = 1000, b = 5) => {
   return Math.floor(a * Math.pow(Math.log(level), b));
 };
 
-export 
+//export 
 const expCurve = (a = 1000, b = 5) => {
   let expCurve_arr = [];
   levels.forEach((level) => {
@@ -84,4 +84,4 @@ const expCurve = (a = 1000, b = 5) => {
   return expCurve_arr;
 };
 
-//module.exports = { next, previous, multiplier, levels, expNext, expCurve };
+module.exports = { next, previous, multiplier, levels, expNext, expCurve };

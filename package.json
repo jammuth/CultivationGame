@@ -1,6 +1,7 @@
 {
   "name": "cultivationgame",
   "version": "1.0.0",
+  "type":"module",
   "main": "index1.js",
   "scripts": {
     "test": "jest"

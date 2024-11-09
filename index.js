@@ -1,5 +1,5 @@
-import { expCurve } from './cultivateGame.js';
-import { generateMaterialName } from './materialGenerator.js';
+const {expcurve} = require('./cultivateGame.js');
+const {generateMaterial} = require('./materialGenerator.js');
 
 document.getElementById('params').onsubmit = function (event) {
   event.preventDefault();
@@ -32,7 +32,7 @@ document.getElementById('generate').onclick = function (event) {
   herblist.innerHTML = ''; // Clear previous content
   let herbs = [];
   for (let i = 0; i < 25; i++) {
-    herbs.push(generateMaterialName());
+    herbs.push(generateMaterial());
   }
 
   herbs.forEach((herb) => {
